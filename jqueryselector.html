@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Selector - Faisal Dzulfikar</title>
+	<style type="text/css">
+		h1{color: blue}
+		h2{color: orange}
+		h3{color: darkred}
+		p{color: brown}
+		li{color: brown}
+		ul{color: brown}
+		a{color :cyan}
+	</style>
+</head>
+<body>
+	
+	<a href="index.html">BACK</a>
+	<h1>JQuery Selector</h1>
+
+	<script src="jquery.min.js"></script>
+
+	<button>SULAP</button>
+
+	<h2>Menggunakan Elemen Selector</h2> <!-- ELEMEN SELECTOR-->
+	
+	<br>
+	<h3>Contoh 1 : </h3> <!-- menggunakan tag-->
+	<p>ini ntar bakal menghilang</p>
+	<p>iya ini juga</p>
+
+	
+	<script>
+	$(document).ready(function()
+	{
+	  $("button").click(function()
+	  {
+	    $("p").hide();
+	  });
+	});
+	</script>
+
+	<br>
+	<h3>Contoh 2 : </h3>
+	<p>Kalau Yang Dibawah Ini bakal henshin (berubah)</p>
+	<ul id="destinations">
+	    <li>Aku</li>
+	    <li>Kamen</li>
+	    <li>Rider</li>
+	</ul>
+
+
+	<script>
+	$(document).ready(function()
+	{
+	  $("button").click(function()
+	  {
+	    $("li").text("DECADE");
+	  });
+	});
+	</script>
+
+	<br>
+	<h2>#id Selector</h2> <!-- ID SELECTOR-->
+	<br>
+	
+	<h3>Contoh 1 : </h3> <!-- menggunakan ID-->
+	<h4 id="sample">Aku akan ikut menhilang</h4>
+	<p>ini ntar bakal menghilang</p>
+	<p>iya ini juga</p>
+
+	<script>
+	$(document).ready(function(){
+	  $("button").click(function(){
+	    $("#sample").hide();
+	  });
+	});
+	</script>
+
+	<h3>Contoh 2 : </h3>
+	<p>Kamen Rider Apa ?</p>
+	<ul id="destination">
+	    <li>DECADE</li>
+	    <li>EX-AID</li>
+	    <li>RYUKI</li>
+	</ul>
+
+	<script>
+	$(document).ready(function()
+	{
+	  $("button").click(function()
+	  {
+	    $("#destination").text("DECADE, EX-AID or RYUKI?");
+	  });
+	});
+	</script>
+
+	<br>
+
+		<h2>.class Selector</h2> <!-- CLASS SELECTOR-->
+		<br>
+		
+		<h3>Contoh 1 : </h3> <!-- menggunakan CLASS-->
+		
+		<h3 class="sample" style="color: red">Iron Man</h3>
+
+		<script>
+		$(document).ready(function(){
+		  $("button").click(function(){
+		    $(".sample").hide();
+		  });
+		});
+		</script>
+
+		<h3>Contoh 2 :</h3>
+
+		<p> Berubah Jadi Power Ranger</p>
+		<ul id="destinations">
+		    <li class='promo'>Power</li>
+		    <li class='promo'>Ranger</li>
+		    <li class='promo'>?</li>
+		</ul>
+
+		<script>
+		$(document).ready(function()
+		{
+		  $("button").click(function()
+		  {
+		    $(".promo").text("THUNDERSTROM");
+		  });
+		});
+		</script>
+
+</body>
+</html>

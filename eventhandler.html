@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EVENT HANDLER - Faisal Dzulfikar</title>
+</head>
+<body>
+	<a href="index.html">BACK</a>
+	<br>
+
+	<h2>SIAPA KAH YANG KAMU SUKA</h2>
+
+	<p>Klik Nama Tersebut</p>
+
+	<ul class="suka">
+		<li class="Anisa">Anisa</li>  
+		<li class="Clarisa">Clarisa</li>
+		<li class="Hanalisa">Hanalisa</li>
+		<li class="Jesica">Jesica</li>
+	</ul>
+
+	<button id="suse">Suka Semua</button>
+
+
+	<script src="jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.Anisa').on('click', function() {
+				alert('SAYA SUKA ANISA!!');
+			})
+			$('.Clarisa').on('click', function() {
+				alert('SAYA SUKA Clarisa!!');
+			})
+			$('.Hanalisa').on('click', function() {
+				alert('SAYA SUKA Hanalisa!!');
+			})
+			$('.Jesica').on('click', function() {
+				alert('SAYA SUKA Jesica!!');
+			})
+			$('#suse').on('click', function() {
+				alert('AKU SUKA SEMUANYAAA!!, AKU FAKBOI!!!');
+			})
+		})
+	</script>
+
+	
+	<h2>SIAPA KAH YANG KAMU BENCI</h2>
+
+	<p>Klik Nama Tersebut (UNTUK MENGHAPUS NAMA TERSEBUT)</p>
+
+	<ul class="Benci">
+		<li class="Jodie">Jodie</li>  
+		<li class="Raura">Raura</li>
+		<li class="Nadia">Nadia</li>
+		<li class="Lulua">Lulu</li>
+	</ul>
+
+	<button id="bese">Benci Semua</button>
+
+
+	<script src="jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.Jodie').on('click', function() {
+				$('.Jodie').remove();
+				alert('SAYA Benci JODIE!!');
+			})
+			$('.Raura').on('click', function() {
+				$('.Raura').remove();
+				alert('SAYA Benci RAURA!!');
+			})
+			$('.Nadia').on('click', function() {
+				$('.Nadia').remove();
+				alert('SAYA Benci NADIA!!');
+			})
+			$('.Lulu').on('click', function() {
+				$('.Lulu').remove();
+				alert('SAYA Benci LULU!!');
+			})
+			$('#bese').on('click', function() {
+				$('.Benci').remove();
+				alert('AKU Benci SEMUANYAAA!!, AKU SADBOI!!!');
+			})
+		})
+	</script>
+
+	
+</body>
+</html>

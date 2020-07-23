@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Selector Pseudoclass (DOM) - Faisal Dzulfikar</title>
+</head>
+<body>
+	<a href="index.html">BACK</a>
+	<br>
+	<button class="aksi1">Mencari elemen tertentu</button>
+	<button class="aksi2">Mencari elemen child</button>
+	<button class="aksi3">Mencari elemen lebih dari satu</button>
+	<button class="aksi4">Memilih elemen pertama atau elemen terakhir</button>
+	<button class="aksi5">Memilih elemen ganjil atau genap</button>
+
+	<script src="jquery.min.js"></script>
+
+	<ul id="destinations">
+	    <li>child, child, nol, pertama</li>
+	    <li>child, satu</li>
+	        <ul>
+	            <li>dua</li>
+	            <li>tiga</li>
+	            <li>empat</li>
+	            <li>lima</li>
+	            <li class="ambil1">genep, pilihan</li>
+	        </ul>
+	    <li>child, tujuh</li>
+	    <li>child, salapan</li>
+	    <li id="ambil2">child, sambilan, terakhir, pilihan</li>
+	</ul>
+	<script>
+	$(document).ready(function()
+	{
+	  $(".aksi1").click(function()
+	  {
+	    $("#destinations li").css("background-color", "yellow");
+	  });
+	});
+
+	$(document).ready(function()
+	{
+	  $(".aksi2").click(function()
+	  {
+	    $("#destinations > li").css("background-color", "red");
+	  });
+	});
+
+	$(document).ready(function()
+	{
+	  $(".aksi3").click(function()
+	  {
+	$(".ambil1, #ambil2").css("background-color", "orange");
+	  });
+	});
+
+	$(document).ready(function()
+	{
+	  $(".aksi4").click(function()
+	  {
+	   $("#destinations li:first").css("background-color", "blue");
+	   $("#destinations li:last").css("background-color", "green");
+	  });
+	});
+
+	$(document).ready(function()
+	{
+	  $(".aksi5").click(function()
+	  {
+	   $("#destinations li:odd").css("background-color", "cyan");
+	   $("#destinations li:even").css("background-color", "lime");
+	  });
+	});
+	</script> 
+</body>
+</html>

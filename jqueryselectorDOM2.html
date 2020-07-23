@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Selector Pseudoclass (DOM) Part 2 - Faisal Dzulfikar</title>
+</head>
+<body>
+	<a href="index.html">BACK</a>
+	<br>
+	
+	<h1>JQuery Selector Pseudoclass (DOM) Part 2</h1>
+
+	<h3>Liat Kodingan Dan Hasil Jangan cuman liat hasilnya aja</h3>
+
+	<ul class="percobaan">
+
+		<h2>ANJAY PERTAMA</h2>	
+		<h3>ANJAY KEDUA</h3>
+	
+	</ul>
+	
+	<br>
+
+	<!-- INI GET -->
+	<p class="teks">INI TEKS</p>
+	<p class="strong"><strong>TEKS STRONG</strong></p>
+	<p><input type="text" class="inputan" value="ADA ISI"></p>
+
+	<br>
+
+	<!-- INI SET -->
+	<p class="teks2">INI TEKS</p>
+	<p class="strong2"><strong>TEKS STRONG</strong></p>
+    <p><input type="text" class="inputan2" value="ADA ISI"></p>
+
+    <br>
+    
+    <!-- INI REMOVE -->
+    <li class="remop">INI AKAN HILANG</li>
+    <li class="emti"><strong>INI AKAN GONE</strong></li>
+
+
+	<script src="jquery.min.js"></script>
+	<script>
+
+		var sebelum = $('<p>Ini kalau sebelum text</p>');
+		var sesudah = $('<p>Ini kalau sesudah text</p>');
+		var dalamaw = $('<p>Ini kalau didalam awal text</p>');
+		var dalamak = $('<p>Ini kalau didalam akhir text</p>');
+
+		$(document).ready(function() {
+			$('.percobaan').prepend(dalamaw);	//bisa juga => dalamaw.prependTo($('.lokasi'));
+			$('.percobaan').append(dalamak);	//bisa juga => dalamak.appendto($('.lokasi'));
+			$('.percobaan').before(sebelum);	//bisa juga => sebelum.insertBefore($('.lokasi')); 
+			$('.percobaan').after(sesudah);		//bisa juga => sesudah.insertAfter($('.lokasi'));
+			
+			//GET
+			console.log($('.teks').text());
+			console.log($('.strong').html());
+			console.log($('.inputan').val());
+
+			//SET
+			$('.teks2').text('INI TEKS 2');
+			$('.strong2').html('<strong>INI TEKS 2</strong>');
+    		$('.inputan2').val('ADA ISI 2');
+
+    		//REMOVE
+			$('.remop').remove();
+			$('.emti').empty();
+		})
+	</script>
+</body>
+</html>

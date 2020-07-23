@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fitur Effect pada JQuery - Faisal Dzulfikar</title>
+</head>
+<body>
+	<h2>Fitur Effect</h2>
+	<!-- REMOVE -->
+	<p class="gone">AKU BISA HILANG</p> 
+	<button class="ilang">HILANG</button>
+
+	<br>
+	<br>
+	
+	<!-- HIDE AND SHOW -->
+	<p class="hide">SEMBUNYIIII</p> 
+	<button class="ngumpet">NGUMPET</button> <button class="keluar">BALIK</button> 
+
+	<br>
+	<br>
+	
+	<!-- ANIMASI FADE -->
+	<p class="fade">ANIMASI FADE NIH</p>
+	<button class="fadeout">FADE OUT</button> <button class="fadein">FADE IN</button> 
+	<button class="fadetoggle">FADE TOGGLE</button>
+
+	<br>
+	<br>
+	
+	<!-- ANIMASI SLIDE -->
+	<p class="slide">ANIMASI SLIDE NIH</p>
+	<button class="slideup">SLIDE UP</button> <button class="slidedown">SLIDE DOWN</button> 
+	<button class="slidetoggle">SLIDE TOGGLE</button>
+
+	<br>
+	<br>
+
+	<!-- ANIMASI SLIDE -->
+	<p class="animasii">ANIMASI NIH</p>
+	<button class="animate">ANIMASI</button>
+
+	<script src="jquery.min.js"></script>
+	<script>
+		//Remove
+		$('.ilang').on('click',function() {
+			$('.gone').remove();
+			alert('TEKS NYA BAKAL HILANG BOI!!');
+		});
+
+		// HIDE AND SHOW
+		$('.ngumpet').on('click', function()
+		{
+		    $('.hide').hide();
+		});
+
+
+		$('.keluar').on('click', function()
+		{
+		    $('.hide').show();
+		});
+
+		//ANIMATION FADE
+		$('.fadeout').on('click', function()
+		{
+		    $('.fade').fadeOut();
+		});
+
+		$('.fadein').on('click', function()
+		{
+		    $('.fade').fadeIn();
+		});
+
+		$('.fadetoggle').on('click', function(){
+		    $('.fade').fadeToggle();
+		});
+
+		//ANIMATION SLIDE
+		$('.slideup').on('click', function()
+		{
+		    $('.slide').slideUp();
+		});
+
+		$('.slidedown').on('click', function()
+		{
+		    $('.slide').slideDown();
+		});
+
+		$('.slidetoggle').on('click', function(){
+		    $('.slide').slideToggle();
+		});
+
+		//ANIMASI
+		$('.animate').on('click', function(){
+		    $('.animasii').animate({
+		        marginLeft:100,opacity:0
+		    });
+		});
+	</script>
+</body>
+</html>
