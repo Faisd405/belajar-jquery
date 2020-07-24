@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fitur Effect 2 - Faisal Dzulfikar</title>
+	<style type="text/css">
+		.merah{
+			color: red;
+		}
+		.biru{
+			color: blue;
+		}
+		.besar{
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>
+	<a href="index.html">Back</a>
+	
+	<h1>Fitur Effect 2</h1>
+
+	<p>Klik teks dibawah : </p>
+
+	<ul>
+		<li id="merah">Berubah Jadi Merah</li>
+		<li id="biru">Berubah Jadi Biru</li>
+		<li id="besar">Berubah Jadi Besar</li>
+		
+		<br>
+
+		<button id="normal">Klik Ini Untuk Membalikan Ke Semula</button>
+		<button id="toggle">Klik Ini Untuk Memainkan Teks tersebut</button>
+	</ul>
+
+	<script src="jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#merah').on('click',function(){
+			        $('#merah').addClass('merah');
+			});
+
+			$('#biru').on('click',function(){
+			        $('#biru').addClass('biru');
+			});
+
+			$('#besar').on('click',function(){
+			        $('#besar').addClass('besar');
+			});
+
+			$('#normal').on('click',function(){
+			        $('.merah').removeClass('merah');
+			        $('.biru').removeClass('biru');
+			        $('.besar').removeClass('besar');
+			});
+
+			$('#toggle').on('click',function(){
+			        $('#merah').toggleClass('merah');
+			        $('#biru').toggleClass('biru');
+			        $('#besar').toggleClass('besar');
+			});
+
+		});
+	</script>
+</body>
+</html>
